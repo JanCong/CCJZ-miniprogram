@@ -48,18 +48,18 @@ Page({
     if (now < new Date(dateFormat(now, 'yyyy/mm/dd 00:30:00'))) {
       minPrize = 0.01;
       maxPrize = 10.00;
-      } else if (now < new Date(dateFormat(now, 'yyyy/mm/dd 6:00:00'))) {
-        minPrize = 0.00;
-        maxPrize = 0.00;
-        this.setData({
-          msg: '今天不乖，没有奖励！'
-        });
-      } else if (now < new Date(dateFormat(now, 'yyyy/mm/dd 20:00:00'))) {
-        minPrize = 0.00;
-        maxPrize = 0.00;
-        this.setData({
-          msg: '今天这么早睡？！别瞎点嗷！'
-        });
+    } else if (now < new Date(dateFormat(now, 'yyyy/mm/dd 6:00:00'))) {
+      minPrize = 0.00;
+      maxPrize = 0.00;
+      this.setData({
+        msg: '今天不乖，没有奖励！'
+      });
+    } else if (now < new Date(dateFormat(now, 'yyyy/mm/dd 20:00:00'))) {
+      minPrize = 0.00;
+      maxPrize = 0.00;
+      this.setData({
+        msg: '今天这么早睡？！别瞎点嗷！'
+      });
     } else if (now < new Date(dateFormat(now, 'yyyy/mm/dd 22:00:00'))) {
       minPrize = 50.00;
       maxPrize = 100.00;
