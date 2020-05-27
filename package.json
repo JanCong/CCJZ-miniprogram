@@ -1,0 +1,16 @@
+{
+  "name": "ccjz",
+  "version": "1.0.0",
+  "main": "app.js",
+  "dependencies": {
+    "miniprogram-licia": "^1.21.2"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "cong",
+  "license": "ISC",
+  "description": ""
+}

@@ -1,0 +1,50 @@
+<view class="page">
+	<view class="page__hd">
+		<view class="page__title">橙宝宝的早睡激励计划</view>
+	</view>
+	<view class="page__bd page__bd_spacing">
+		<view class="weui-flex">
+			<view class="weui-flex__item">
+				<view class="placeholder">现在时间</view>
+			</view>
+		</view>
+		<view class="weui-flex">
+			<view class="weui-flex__item">
+				<view class="placeholder">{{currentTime}}</view>
+			</view>
+		</view>
+		<view class="weui-flex" wx:if="{{maxPrize > 0.00}}">
+			<view class="weui-flex__item">
+				<view class="placeholder">奖励范围</view>
+			</view>
+		</view>
+		<view class="weui-flex">
+			<view class="weui-flex__item" wx:if="{{maxPrize > 0.00}}">
+				<view class="placeholder">{{minPrize}} ~ {{maxPrize}}</view>
+			</view>
+			<view class="weui-flex__item" wx:if="{{maxPrize == 0.00}}">
+				<view class="placeholder">{{msg}}</view>
+			</view>
+		</view>
+		<view class="weui-flex">
+			<view class="weui-flex__item">
+				<view class="weui-btn-area">
+					<button class="weui-btn" type="default" bindtap="tapSleepButton">睡觉</button>
+				</view>
+			</view>
+		</view>
+	</view>
+	<mp-dialog title="今日奖励" show="{{dialogShow}}" bindbuttontap="tapDialogButton" buttons="{{[{text: '确认'}]}}">
+		<view wx:if="{{maxPrize > 0.00}}">
+			<view>
+				今天睡觉时间 {{sleepTime}}
+			</view>
+			<view>
+				奖励{{prize}}元
+			</view>
+		</view>
+		<view>
+			{{msg}}
+		</view>
+	</mp-dialog>
+</view>
